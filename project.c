@@ -38,7 +38,7 @@ int  main(void)
     
 		// Enable the GPIO pin for the LED (PF3).  Set the direction as output, and
     // enable the GPIO pin for digital function.
-    GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_2);
+    GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_1);
     while(1)
     {
 				UARTCharPut(UART0_BASE, temp);
@@ -46,7 +46,7 @@ int  main(void)
 				//UARTCharPut(UART0_BASE, '\n');
 				//UARTCharPut(UART0_BASE, '\r');
         // Turn on the LED.
-        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0xF);
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0xF);
 
         // Delay for a bit.
         for(ui32Loop = 0; ui32Loop < 200000; ui32Loop++)
@@ -54,7 +54,7 @@ int  main(void)
         }
 
         // Turn off the LED.
-        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0x0);
+        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0x0);
 
         // Delay for a bit.
         for(ui32Loop = 0; ui32Loop < 200000; ui32Loop++)
